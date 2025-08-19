@@ -1,0 +1,112 @@
+
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\onehalfspacing
+
+\begin{document}
+
+% CAPA
+\begin{titlepage}
+    \centering
+    {\Large PROJETO TÉCNICO - PORTFÓLIO PROFISSIONAL \par}
+    \vspace{2cm}
+    {\Huge \textbf{RELATÓRIO TÉCNICO: BLUETOOTH LOW ENERGY 5.1} \par}
+    \vspace{2cm}
+    {\Large ANA FLÁVIA MACIEL \par}
+    \vfill
+    {\large CURITIBA - PR \par}
+    {\large 2025 \par}
+\end{titlepage}
+
+% FOLHA DE ROSTO / OBJETIVO
+\chapter*{Projeto Técnico - Portfólio Profissional}
+Relatório técnico desenvolvido como parte de projeto de aprimoramento em redação técnica, com foco na estruturação de conteúdo acessível e tecnicamente embasado para uso em portfólio profissional.
+
+\chapter*{Objetivo}
+Relatório técnico desenvolvido com foco na redação e documentação técnica de tecnologias emergentes, tomando como base o Bluetooth Low Energy 5.1. O documento busca apresentar de forma clara, objetiva e tecnicamente embasada a evolução do BLE, seus usos práticos e suas limitações, com linguagem acessível e estrutura de acordo com normas ABNT.
+
+\tableofcontents
+
+\chapter{Introdução}
+O Bluetooth é uma tecnologia de comunicação sem fio de curto alcance amplamente empregada em dispositivos móveis, como smartphones, fones de ouvido e vestíveis. Com o crescimento da Internet das Coisas (IoT), surgiram demandas por soluções com maior eficiência energética e funcionalidades ampliadas, como posicionamento em ambientes internos.
+
+Para atender a essas demandas, foi desenvolvido o Bluetooth Low Energy (BLE), ou Bluetooth de Baixo Consumo, introduzido na versão 4.0 da especificação Bluetooth Core. A versão 5.1, lançada em 2019, trouxe melhorias significativas, incluindo novos mecanismos de localização, maior precisão na comunicação e suporte a novas aplicações na indústria, na saúde e na automação. Desde então, versões subsequentes como a 5.2 (2020), 5.3 (2021) e 5.4 (2023) têm trazido aprimoramentos em eficiência, segurança e novas funcionalidades como o LE Audio e suporte a transmissão de dados em multicast com menor latência e maior estabilidade, demonstrando a constante evolução dessa tecnologia.
+
+\chapter{Evolução das versões do Bluetooth}
+A tecnologia Bluetooth tradicional, conhecida como BR/EDR (Basic Rate/Enhanced Data Rate), apresentava consumo elevado de energia, o que limitava sua aplicação em dispositivos portáteis. A introdução do BLE na versão 4.0 focou na redução de consumo e simplificação da comunicação.
+
+A versão 5.0 ampliou a taxa de transmissão para até 2 Mbps, o alcance (aproximadamente 240 m em áreas abertas) e a capacidade de broadcast. Já a versão 5.1 adicionou os recursos de localização baseados em direção de sinal (Angle of Arrival -- AoA e Angle of Departure -- AoD), permitindo rastreio mais preciso de dispositivos. A versão 5.2 introduziu o LE Audio, uma tecnologia que substitui o áudio clássico via Bluetooth, promovendo melhor qualidade sonora e menor consumo. A versão 5.3 otimizou a alternância entre canais e o controle de energia, enquanto a 5.4 possibilitou a criação de redes maiores e mais eficientes por meio de melhorias na difusão de dados e no controle de acesso.
+
+\chapter{Tabela Comparativa}
+\begin{longtable}{|c|c|p{6.5cm}|p{6.5cm}|}
+\hline
+\textbf{Versão} & \textbf{Ano} & \textbf{Destaques} & \textbf{Limitações} \\ \hline
+4.0 & 2010 & Introdução do BLE, baixo consumo & Baixa taxa de transmissão \\ \hline
+5.0 & 2016 & Maior alcance, velocidade e capacidade & Sem suporte à localização precisa \\ \hline
+5.1 & 2019 & Localização por AoA/AoD, direção de sinal & Requer hardware compatível \\ \hline
+5.2 & 2020 & LE Audio; isocrônico para áudio simultâneo & Início da transição, adoção parcial do mercado \\ \hline
+5.3 & 2021 & Otimização de consumo e troca de canais & Pequenas melhorias incrementais \\ \hline
+5.4 & 2023 & Suporte avançado a redes mesh; melhorias no controle de acesso & Complexidade maior para integração \\ \hline
+\end{longtable}
+
+\chapter{Casos de Uso}
+\begin{itemize}
+    \item \textbf{Localizadores pessoais}: etiquetas inteligentes (como AirTags) utilizam BLE 5.1 para localizar objetos com alta precisão em ambientes fechados.
+    \item \textbf{Navegação indoor}: sistemas de localização interna em hospitais, aeroportos e centros comerciais.
+    \item \textbf{Monitoramento industrial}: rastreamento de equipamentos e ativos em tempo real em linhas de produção.
+    \item \textbf{Saúde e bem-estar}: pulseiras fitness e monitores cardíacos que operam por dias com uma única carga.
+    \item \textbf{Controle de acesso}: portas inteligentes que se abrem com base na aproximação de dispositivos autorizados.
+    \item \textbf{Automação residencial}: sensores de movimento e temperatura integrados com hubs domésticos inteligentes.
+    \item \textbf{Transmissão de áudio via LE Audio}: auriculares e aparelhos auditivos com qualidade superior e menor consumo.
+\end{itemize}
+
+\chapter{Posicionamento com AoA e AoD}
+As técnicas Angle of Arrival (AoA) e Angle of Departure (AoD) permitem que dispositivos compatíveis com BLE 5.1 determinem a direção de onde o sinal está vindo ou para onde está sendo enviado, com base em múltiplas antenas e medições de fase.
+
+\begin{itemize}
+    \item \textbf{AoA}: o receptor (por exemplo, um smartphone) mede a direção do sinal utilizando duas ou mais antenas para calcular o ângulo de chegada.
+    \item \textbf{AoD}: o transmissor (como um beacon) envia sinais com variações de fase entre antenas, permitindo que o receptor calcule o ângulo de origem.
+\end{itemize}
+
+Conforme ilustrado na Figura~\ref{fig:aoa_aod}, essas técnicas permitem que os dispositivos realizem estimativas de direção do sinal com base na análise de fase entre múltiplas antenas, tanto no transmissor quanto no receptor.
+
+Essas técnicas permitem estimativas de localização com margem de erro inferior a 1 metro, viabilizando aplicações em rastreamento de ativos, navegação indoor e segurança em ambientes controlados.
+
+\begin{figure}[h!]
+    \centering
+    % Substitua o arquivo abaixo por uma imagem na mesma pasta do .tex (por exemplo, figura_aoa_aod.png)
+    \includegraphics[width=0.75\textwidth]{figura_aoa_aod.png}
+    \caption{Funcionamento do posicionamento com AoA e AoD. Fonte: EBYTE (2021).}
+    \label{fig:aoa_aod}
+\end{figure}
+
+\chapter{Limitações}
+Apesar das inovações, o BLE 5.1 apresenta algumas limitações:
+\begin{itemize}
+    \item Exige hardware específico com múltiplas antenas para funcionamento completo de AoA/AoD.
+    \item Interferência em ambientes congestionados (Wi-Fi, micro-ondas) pode afetar a precisão.
+    \item Alcance inferior ao de tecnologias como Wi-Fi, dependendo do ambiente.
+    \item Posicionamento com limitações em locais com muitas barreiras físicas ou reflexões de sinal.
+\end{itemize}
+
+\chapter{Conclusão}
+O Bluetooth Low Energy 5.1 representa um avanço significativo na tecnologia de comunicação sem fio de curto alcance, unindo eficiência energética e recursos de localização precisos. Sua aplicação se estende por diversos setores, contribuindo para o desenvolvimento de soluções inteligentes e integradas.
+
+As versões posteriores, como 5.2, 5.3 e 5.4, reforçam esse avanço ao introduzir novos paradigmas de áudio, gerenciamento energético e escalabilidade em redes. A constante evolução do Bluetooth Low Energy mostra que esta tecnologia continuará sendo uma base sólida para inovações na conectividade de dispositivos e na expansão da Internet das Coisas.
+
+\chapter{Referências}
+\begin{itemize}
+    \item BLUETOOTH SIG. \textit{Bluetooth Low Energy Primer}. Disponível em: \url{https://www.bluetooth.com/bluetooth-le-primer}. Acesso em: 23 jun. 2025.
+    \item EBYTE. \textit{Um minuto para entender os princípios de medição de distância com AOD e AOA}. 2021. Disponível em: \url{https://www.ebyte.com/news/1461.html}. Acesso em: 24 jul. 2025.
+    \item WOOLLEY, M. \textit{Bluetooth Core 5.1 Feature Overview}. Bluetooth SIG, 2019. Disponível em: \url{https://www.bluetooth.com/blog/bluetooth-core-specification-5-1/}. Acesso em: 23 jun. 2025.
+\end{itemize}
+
+\end{document}
